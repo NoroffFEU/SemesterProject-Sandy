@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 .btn-primary {
-  @apply bg-primary text-dark font-bold py-2 px-10 rounded-full;
+  @apply bg-primary text-dark font-bold py-2 px-10 rounded-full fredoka-heading;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
 .btn-secondary {
-  @apply bg-complimentary text-dark font-bold py-2 px-10 rounded-full;
+  @apply bg-complimentary text-dark font-bold py-2 px-10 rounded-full fredoka-heading;
 }
 
 .btn-normal {
@@ -45,4 +45,8 @@
 
 .links:hover {
   opacity: 80%;
+}
+
+.form-labels {
+  @apply text-dark fredoka-heading;
 }
