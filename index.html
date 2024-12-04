@@ -1,49 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Biddy, the vintage furniture marketplace</title>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-    </style>
 
-    <link rel="stylesheet" href="styles/style.css" />
-  </head>
-  <body class="bg-secondary">
-    <header class="flex justify-between">
-      <div>
-        <img src="./assets/images/logos/biddyLogo.png" alt="Biddy logo" />
-      </div>
-      <div>
-        <nav>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Listings</a></li>
-            <li><a href="#">Log In</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biddy, the vintage furniture marketplace</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Inter:opsz@14..32&family=Sedgwick+Ave+Display&display=swap');
+    @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+  </style>
 
-    <section>
-      <div>
-        <div>
-          <img
-            src="./assets/images/images/hero/320731640_11288322 1.png"
-            alt="Hero"
-          />
-        </div>
-        <div>
-          <h1>Rediscover unique, antique furniture</h1>
-        </div>
-        <button class="btn-primary">
-          <img
-            src="./assets/images/icons/right-arrow 1.png"
-            alt="arrow icon right"
-          />
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body class="bg-secondary pr-20 pl-20">
+  <header class="flex justify-between mb-10">
+    <div>
+      <img src="./assets/images/logos/biddyLogo.png" alt="Biddy logo" />
+    </div>
+    <div class="flex">
+      <nav class="flex">
+        <ul class="inline-flex items-center list-none">
+          <li class="inline pl-10 underline fredoka-heading nav-link text-lg">
+            <a href="#">Home</a>
+          </li>
+          <li class="inline pl-10 fredoka-heading nav-link text-lg" pl-10>
+            <a href="#">Listings</a>
+          </li>
+          <li class="inline pl-10 fredoka-heading nav-link text-lg">
+            <a href="#">Log In</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section>
+    <div class="bg-card rounded-3xl flex">
+      <div class="inline-block pr-32">
+        <img src="./assets/images/images/hero/320731640_11288322 1.png" alt="Hero" />
+      </div>
+      <div class="flex flex-col gap-16 justify-center">
+        <h1 class="text-5xl fredoka-heading">
+          Rediscover <br />
+          unique, <br />
+          antique <br />
+          furniture
+        </h1>
+        <button class="btn-primary btn-normal">
+          <img src="./assets/images/icons/right-arrow 1.png" alt="arrow icon right" />
         </button>
       </div>
-    </section>
-  </body>
+    </div>
+  </section>
+
+  <section class="block text-center pt-10 pb-10 fredoka-heading text-3xl">
+    <h2>Top 3 newest listings</h2>
+  </section>
+
+  <div class="grid grid-cols-3 mb-10">
+    <div class="block bg-card ml-8 mr-8 rounded-3xl">
+      <div class="flex justify-center pt-5 pb-5">
+        <img src="./assets/images/images/retro-chair.jpg" alt="Vintage chair"
+          class="object-cover h-55 w-80 rounded-3xl" />
+      </div>
+
+      <div class="block justify-between">
+        <div class="ml-10 mb-6">
+          <h3 class="fredoka-heading text-xl">Antique chair</h3>
+          <p class="inter-parag text-base pt-4">Price: $200</p>
+        </div>
+
+        <div class="flex flex-col-2 justify-between ml-10 mr-10">
+          <button class="flex justify-around scale-50">
+            <img src="./assets/images/icons/add-to-cart 1.png" alt="Add to cart button" />
+          </button>
+
+          <button class="btn-primary btn-small mb-6">
+            <img src="./assets/images/icons/right-arrow 1.png" alt="View product button" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="block bg-card ml-8 mr-8 rounded-3xl">
+      <div class="flex justify-center pt-5 pb-5">
+        <img src="./assets/images/images/retro-radio.jpg" alt="Vintage chair"
+          class="object-cover h-55 w-80 rounded-3xl" />
+      </div>
+
+      <div class="block justify-between">
+        <div class="ml-10 mb-6">
+          <h3 class="fredoka-heading text-xl">Antique radio</h3>
+          <p class="inter-parag text-base pt-4">Price: $500</p>
+        </div>
+
+        <div class="flex flex-col-2 justify-between ml-10 mr-10">
+          <button class="flex justify-around scale-50">
+            <img src="./assets/images/icons/add-to-cart 1.png" alt="Add to cart button" />
+          </button>
+
+          <button class="btn-primary btn-small mb-6">
+            <img src="./assets/images/icons/right-arrow 1.png" alt="View product button" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="block bg-card ml-8 mr-8 rounded-3xl">
+      <div class="flex justify-center pt-5 pb-5">
+        <img src="./assets/images/images/retro-sofa.jpg" alt="Vintage chair"
+          class="object-cover h-55 w-80 rounded-3xl" />
+      </div>
+
+      <div class="block justify-between">
+        <div class="ml-10 mb-6">
+          <h3 class="fredoka-heading text-xl">Antique sofa</h3>
+          <p class="inter-parag text-base pt-4">Price: $300</p>
+        </div>
+
+        <div class="flex flex-col-2 justify-between ml-10 mr-10">
+          <button class="flex justify-around scale-50">
+            <img src="./assets/images/icons/add-to-cart 1.png" alt="Add to cart button" />
+          </button>
+
+          <button class="btn-primary btn-small mb-6">
+            <img src="./assets/images/icons/right-arrow 1.png" alt="View product button" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <section>
+    <h4 class="block text-center fredoka-heading pt-10 pb-10 text-3xl">
+      Why buy pre-loved furniture?
+    </h4>
+    <div class="flex flex-col-3 justify-evenly text-center inter-parag text-xl pb-10">
+      <div>
+        <img src="./assets/images/icons/recycle 1.png" alt="Recycle icon" class="mb-10" />
+        <p>Sustainable</p>
+      </div>
+      <div>
+        <img src="./assets/images/icons/funding 1.png" alt="Funding icon" class="mb-10" />
+        <p>Affordable</p>
+      </div>
+      <div>
+        <img src="./assets/images/icons/value 1.png" alt="Value icon" class="mb-10" />
+        <p>Unique</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-complimentary -mx-20 flex flex-col-3 justify-around pt-10 pb-10">
+    <div class="text-sm underline">
+      <ul>
+        <li>
+          <a href="#" class="links" class="transition-transform transform hover:scale-110">Home</a>
+        </li>
+        <li>
+          <a href="#" class="links" class="transition-transform transform hover:scale-110">Listings</a>
+        </li>
+        <li>
+          <a href="#" class="links" class="transition-transform transform hover:scale-110">Log In</a>
+        </li>
+        <li>
+          <a href="#" class="links" class="transition-transform transform hover:scale-110">Sign Up</a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li>
+          <a href="#" class="links" class="transition-transform transform hover:scale-110">Privacy Policy</a>
+        </li>
+        <li>
+          <a href="#" class="links" class="transition-transform transform hover:scale-110">FAQ</a>
+        </li>
+        <li>
+          <a href="#" class="links" class="transition-transform transform hover:scale-110">Terms and Conditions</a>
+        </li>
+        <li>
+          <a href="#" class="links" class="transition-transform transform hover:scale-110">Customer service</a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <img src="./assets/images/logos/biddyLogo.png" alt="Biddy logo" />
+    </div>
+    </div>
+  </footer>
+
+
+
+</body>
+
 </html>

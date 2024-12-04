@@ -2,12 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 .btn-primary {
   @apply bg-primary text-dark font-bold py-2 px-10 rounded-full;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-secondary {
-  @apply bg-complimentary text-dark font-bold py-2 px-10 rounded-lg;
+  @apply bg-complimentary text-dark font-bold py-2 px-10 rounded-full;
+}
+
+.btn-normal {
+  width: 250px;
+}
+
+.btn-small {
+  width: 150px;
+}
+
+.fredoka-heading {
+  @apply text-dark;
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "width" 100;
+}
+
+.inter-parag {
+  @apply text-dark;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "width" 100;
+}
+
+.nav-link {
+  @apply text-primary;
+}
+
+.links:hover {
+  opacity: 80%;
 }
