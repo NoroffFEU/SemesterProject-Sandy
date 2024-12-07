@@ -21,7 +21,7 @@
         <div class="flex">
             <nav class="flex">
                 <ul class="inline-flex items-center list-none">
-                    <li class="inline pl-10 underline fredoka-heading nav-link text-lg">
+                    <li class="inline pl-10 fredoka-heading nav-link text-lg">
                         <a href="#">Home</a>
                     </li>
                     <li class="inline pl-10 fredoka-heading nav-link text-lg" pl-10>
@@ -40,21 +40,29 @@
             </nav>
         </div>
     </header>
-    <section class="grid grid-cols-1 mt-10 mb-10">
-        <div>
-            <input type="file" id="file" name="image" class="input-field" required>
-        </div>
-        <div>
-            <div class="ml-5 sticky top-20">
-                <form>
-                    <label for="title" class="inter-parag text-lg mb-5">Title:</label>
-                    <input type="text" id="title" name="title" class="input-field" required>
-                    <label for="description" class="inter-parag text-lg mb-5">Description:</label>
-                    <textarea name="description" id="description" cols="30" rows="10" class="input-field"
-                        required></textarea>
-                </form>
-                <button class="btn-primary btn-normal fredoka-heading mb-10" type="submit">Submit listing</button>
-            </div>
+    <section class="flex justify-center mt-10 mb-10 bg-card mx-52 rounded-3xl">
+        <div class="grid grid-cols-1">
+            <h1 class="fredoka-heading text-2xl pt-10">Create listing</h1>
+            <form>
+                <label for="file" class="inter-parag text-lg">Insert product images:</label>
+                <input type="file" id="file" name="image" class="input-field mb-5 pt-10" required>
+                <br>
+                <label for="title" class="inter-parag text-lg">Title:</label>
+                <br>
+                <input type="text" id="title" name="title" class="input-field mb-5 w-80 p-1 rounded-lg shadow" required>
+                <br>
+                <label for="date" class="inter-parag text-lg">Final bid date:</label>
+                <br>
+                <input type="datetime" id="date" name="date" class="input-field mb-5 w-80 p-1 rounded-lg shadow"
+                    required>
+                <br>
+                <label for="description" class="inter-parag text-lg">Description:</label>
+                <br>
+                <textarea name="description" id="description" cols="30" rows="10"
+                    class="input-field mb-5 w-80 p-1 rounded-lg shadow"></textarea>
+            </form>
+            <button class="btn-primary btn-normal mb-10" type="submit">Submit
+                listing</button>
         </div>
 
     </section>

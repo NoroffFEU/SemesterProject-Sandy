@@ -10,13 +10,13 @@
         @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
     </style>
 
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="../../styles/style.css" />
 </head>
 
 <body class="bg-secondary pr-20 pl-20">
     <header class="flex justify-between mb-10">
         <div>
-            <img src="./assets/images/logos/biddyLogo.png" alt="Biddy logo" />
+            <img src="../../assets/images/logos/biddyLogo.png" alt="Biddy logo" />
         </div>
         <div class="flex">
             <nav class="flex">
@@ -41,24 +41,83 @@
         </div>
     </header>
 
-    <section>
-        <div class="bg-card rounded-3xl flex">
-            <div class="inline-block pr-32">
-                <img src="./assets/images/images/hero/320731640_11288322 1.png" alt="Hero" />
+    <div>
+        <h1 class="fredoka-heading text-center text-3xl pb-10">Listings:</h1>
+    </div>
+
+    <div class="grid grid-cols-3 mb-10">
+        <div class="block bg-card ml-8 mr-8 rounded-3xl">
+            <div class="flex justify-center pt-5 pb-5">
+                <img src="../../assets/images/images/retro-chair.jpg" alt="Vintage chair"
+                    class="object-cover h-55 w-80 rounded-3xl" />
             </div>
-            <div class="flex flex-col gap-16 justify-center">
-                <h1 class="text-5xl fredoka-heading">
-                    Rediscover <br />
-                    unique, <br />
-                    antique <br />
-                    furniture
-                </h1>
-                <button class="btn-primary btn-normal">
-                    <img src="./assets/images/icons/right-arrow 1.png" alt="arrow icon right" />
-                </button>
+
+            <div class="block justify-between">
+                <div class="ml-10 mb-6">
+                    <h3 class="fredoka-heading text-xl">Antique chair</h3>
+                    <p class="inter-parag text-base pt-4">Price: $200</p>
+                </div>
+
+                <div class="flex justify-between ml-10 mr-10">
+                    <button class="flex justify-around scale-50">
+                        <img src="../../assets/images/icons/add-to-cart 1.png" alt="Add to cart button" />
+                    </button>
+
+                    <button class="btn-primary btn-small mb-6">
+                        <img src="../../assets/images/icons/right-arrow 1.png" alt="View product button" />
+                    </button>
+                </div>
             </div>
         </div>
-    </section>
+
+        <div class="block bg-card ml-8 mr-8 rounded-3xl">
+            <div class="flex justify-center pt-5 pb-5">
+                <img src="../../assets/images/images/retro-radio.jpg" alt="Vintage chair"
+                    class="object-cover h-55 w-80 rounded-3xl" />
+            </div>
+
+            <div class="block justify-between">
+                <div class="ml-10 mb-6">
+                    <h3 class="fredoka-heading text-xl">Antique radio</h3>
+                    <p class="inter-parag text-base pt-4">Price: $500</p>
+                </div>
+
+                <div class="flex justify-between ml-10 mr-10">
+                    <button class="flex justify-around scale-50">
+                        <img src="../../assets/images/icons/add-to-cart 1.png" alt="Add to cart button" />
+                    </button>
+
+                    <button class="btn-primary btn-small mb-6">
+                        <img src="../../assets/images/icons/right-arrow 1.png" alt="View product button" />
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="block bg-card ml-8 mr-8 rounded-3xl">
+            <div class="flex justify-center pt-5 pb-5">
+                <img src="../../assets/images/images/retro-sofa.jpg" alt="Vintage chair"
+                    class="object-cover h-55 w-80 rounded-3xl" />
+            </div>
+
+            <div class="block justify-between">
+                <div class="ml-10 mb-6">
+                    <h3 class="fredoka-heading text-xl">Antique sofa</h3>
+                    <p class="inter-parag text-base pt-4">Price: $300</p>
+                </div>
+
+                <div class="flex justify-between ml-10 mr-10">
+                    <button class="flex justify-around scale-50">
+                        <img src="../../assets/images/icons/add-to-cart 1.png" alt="Add to cart button" />
+                    </button>
+
+                    <button class="btn-primary btn-small mb-6">
+                        <img src="../../assets/images/icons/right-arrow 1.png" alt="View product button" />
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="bg-complimentary -mx-20 flex justify-around pt-10 pb-10">
         <div class="text-sm underline">
@@ -96,7 +155,7 @@
             </ul>
         </div>
         <div>
-            <img src="./assets/images/logos/biddyLogo.png" alt="Biddy logo" />
+            <img src="../../assets/images/logos/biddyLogo.png" alt="Biddy logo" />
         </div>
         </div>
     </footer>
