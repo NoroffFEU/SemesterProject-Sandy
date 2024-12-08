@@ -22,13 +22,13 @@
             <nav class="flex">
                 <ul class="inline-flex items-center list-none">
                     <li class="inline pl-10 fredoka-heading nav-link text-lg">
-                        <a href="#">Home</a>
+                        <a href="../../index.html">Home</a>
                     </li>
                     <li class="inline pl-10 fredoka-heading nav-link text-lg" pl-10>
-                        <a href="#">Listings</a>
+                        <a href="../product/products.html">Listings</a>
                     </li>
                     <li class="inline pl-10 fredoka-heading nav-link text-lg">
-                        <a href="#">Profile</a>
+                        <a href="../profile/profile.html">Profile</a>
                     </li>
                     <li class="inline pl-10 fredoka-heading nav-link text-lg">
                         <a href="#">Log out</a>
@@ -38,28 +38,55 @@
         </div>
     </header>
 
-    <section class="mb-10">
-        <div>
-            <div>
-                <img src="#" alt="Avatar image" />
+    <section class="mb-28 mt-28">
+        <div class="flex justify-evenly">
+            <div class="text-center">
+                <img src="../../assets/images/images/mitch-moondae-zXFtsdi9dIc-unsplash.jpg" alt="Avatar image" class="h-80 w-80 object-cover rounded-full mb-5" />
+                <a href="" class="btn-secondary btn-normal">Edit avatar</a>
             </div>
-            <div>
-                <p>Credits:</p>
-                <h1>Profile name:</h1>
-                <p>Email:</p>
-                <button>Edit profile</button>
-            </div>
-            <div>
-                <ul>
-                    <li><a href="#" class=""></a></li>
-                    <li><a href="#" class=""></a></li>
-                    <li><a href="#" class=""></a></li>
-                    <li><a href="#" class=""></a></li>
-                    <li><a href="#" class=""></a></li>
+            <div class="pt-10">
+                <p class="inter-parag text-2xl pb-10">Credits:</p>
+                <h1 class="fredoka-heading text-2xl pb-10">Profile name:</h1>
+                <p class="inter-parag text-xl pb-10">Email:</p>
+
+                <h2 class="pt-20 fredoka-heading text-lg pb-5">Other:</h2>
+                <ul class="list-disc ">
+                        <li class="underline inter-parag text-base">
+                          <a href="#">My listings</a>
+                        </li>
+                        <li class="inter-parag text-base" pl-10>
+                          <a href="#">FAQ</a>
+                        </li>
+                        <li class="inter-parag text-base">
+                          <a href="#">Privacy policy</a>
+                        </li>
+                        <li class="inter-parag text-base">
+                          <a href="#">Customer service</a>
+                        </li>
+                        <li class="inter-parag text-base">
+                          <a href="#">Terms and conditions</a>
+                        </li>
+    
                 </ul>
             </div>
         </div>
     </section>
+
+    <div class="absolute h-full w-full bg-slate-500 bg-opacity-50 top-0 left-0" id="pop-up">
+        <div class="bg-card flex justify-center rounded-3xl w-2/5 h-60 absolute p-48 top-48 left-1/4">
+            <button><img src="#" ></button>
+            <div>
+                <h3 class="fredoka-heading text-2xl pb-10">Update avatar:</h3>
+            </div>
+            <div>
+                <form action="profile.html">
+                    <input type="file" name="avatar" id="avatar" accept="image/png, image/jpeg" >
+                    <button type="submit" class="btn-primary btn-normal">Update</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
 
 
     <footer class="bg-complimentary -mx-20 flex justify-around pt-10 pb-10">
