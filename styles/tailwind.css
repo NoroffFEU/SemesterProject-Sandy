@@ -50,3 +50,12 @@
 .form-labels {
   @apply text-dark fredoka-heading;
 }
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+

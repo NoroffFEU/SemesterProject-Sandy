@@ -14,4 +14,5 @@
     "dev": "npx tailwindcss -i ./styles/tailwind.css -o ./styles/style.css --watch",
     "build": "npx tailwindcss -i ./styles/tailwind.css -o ./styles/style.css --minify"
   }
-}
+  }
+

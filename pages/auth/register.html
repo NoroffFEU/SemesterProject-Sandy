@@ -10,6 +10,9 @@
         @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
     </style>
 
+    <script defer src="../../app.mjs" type="module"></script>
+    <script defer src="../../src/js/ui/auth/register.js" type="module"></script>
+
     <link rel="stylesheet" href="../../styles/style.css" />
 </head>
 
@@ -27,47 +30,72 @@
                     <li class="inline pl-10 fredoka-heading nav-link text-lg" pl-10>
                         <a href="../product/products.html">Listings</a>
                     </li>
-                    <li class="inline pl-10 fredoka-heading nav-link text-lg">
+                    <li class="inline pl-10 fredoka-heading nav-link text-lg hide" id="profileBtn">
                         <a href="../profile/profile.html">Profile</a>
                     </li>
-                    <li class="inline pl-10 fredoka-heading nav-link text-lg">
+                    <li class="inline pl-10 fredoka-heading nav-link text-lg" id="loginBtn">
                         <a href="../auth/login.html">Log In</a>
                     </li>
-                    <li class="inline pl-10 fredoka-heading nav-link text-lg">
-                        <a href="#">Log out</a>
+                    <li class="inline pl-10 fredoka-heading nav-link text-lg hide" id="logoutBtn">
+                        <a href="#" id="logoutBtn">Log out</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="flex bg-card mx-96 h-fit rounded-3xl px-20 pt-10 pb-10 mt-10 mb-20">
-        <div class="flex flex-col">
+    <section class="flex justify-center mt-20 mb-20">
+    <div class="flex flex-col bg-card p-20 rounded-3xl">
             <h1 class="fredoka-heading text-2xl mb-10">
                 Register
             </h1>
-            <form class="mb-8 ">
-                <label for="Name" class="form-labels">Name</label>
+            <form name="register">
+                <label for="name" class="form-labels">Name</label>
                 <br>
-                <input type="Name" id="name" name="Name" required class="w-80 p-1 rounded-lg shadow mb-3">
+                <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                required 
+                class="w-80 p-1 rounded-lg shadow mb-3">
                 <br>
+
                 <label for="email" class="form-labels">Email</label>
                 <br>
-                <input type="email" id="email" name="email" required class="w-80 p-1 rounded-lg shadow mb-3">
+                <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required 
+                pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
+                title="Please enter a valid noroff.no or stud.noroff.no address" 
+                class="w-80 p-1 rounded-lg shadow mb-3">
                 <br>
+
                 <label for="avatar" class="form-labels">Avatar</label>
                 <br>
-                <input type="file" id="avatar" name="avatar" required class="w-80 p-1 rounded-lg mb-3">
+                <input 
+                type="url" 
+                id="avatar" 
+                name="avatar" 
+                required 
+                class="w-80 p-1 rounded-lg shadow mb-3">
                 <br>
+
                 <label for="password" class="form-labels">Password</label>
                 <br>
-                <input type="password" id="password" name="password" required class="w-80 p-1 rounded-lg shadow">
+                <input 
+                type="password" 
+                id="password" 
+                name="password" 
+                required 
+                class="w-80 p-1 rounded-lg shadow">
                 <br>
+                <div class="text-center flex justify-evenly mt-10">
+                    <button class="btn-secondary btn-small" id="register" type="submit">Register</button>
+                    <a href="./login.html" class="btn-primary btn-small">Log in</a>
+                </div>
             </form>
-            <div class="text-center flex justify-evenly">
-                <button class="btn-secondary btn-small" id="register">Register</button>
-                <button class="btn-primary btn-small" a href="./login.html">Log in</button>
-            </div>
         </div>
     </section>
 

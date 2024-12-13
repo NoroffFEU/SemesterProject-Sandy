@@ -9,6 +9,11 @@
         @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Inter:opsz@14..32&family=Sedgwick+Ave+Display&display=swap');
         @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
     </style>
+    <script defer src="../../src/js/ui/profile/avatarPopUp.js"></script>
+    <script defer src="../../src/js/ui/profile/profile.js" type="module"></script>
+    <script defer src="../../src/js/ui/profile/editAvatar.js" type="module"></script>
+    <script defer src="../../app.mjs" type="module"></script>
+
 
     <link rel="stylesheet" href="../../styles/style.css" />
 </head>
@@ -21,17 +26,20 @@
         <div class="flex">
             <nav class="flex">
                 <ul class="inline-flex items-center list-none">
-                    <li class="inline pl-10 fredoka-heading nav-link text-lg">
+                    <li class="inline pl-10 underline fredoka-heading nav-link text-lg">
                         <a href="../../index.html">Home</a>
                     </li>
                     <li class="inline pl-10 fredoka-heading nav-link text-lg" pl-10>
                         <a href="../product/products.html">Listings</a>
                     </li>
-                    <li class="inline pl-10 fredoka-heading nav-link text-lg">
+                    <li class="inline pl-10 fredoka-heading nav-link text-lg hide" id="profileBtn">
                         <a href="../profile/profile.html">Profile</a>
                     </li>
-                    <li class="inline pl-10 fredoka-heading nav-link text-lg">
-                        <a href="#">Log out</a>
+                    <li class="inline pl-10 fredoka-heading nav-link text-lg" id="loginBtn">
+                        <a href="../auth/login.html">Log In</a>
+                    </li>
+                    <li class="inline pl-10 fredoka-heading nav-link text-lg hide" id="logoutBtn">
+                        <a href="#" id="logoutBtn">Log out</a>
                     </li>
                 </ul>
             </nav>
@@ -41,29 +49,29 @@
     <section class="mb-28 mt-28">
         <div class="flex justify-evenly">
             <div class="text-center">
-                <img src="../../assets/images/images/mitch-moondae-zXFtsdi9dIc-unsplash.jpg" alt="Avatar image" class="h-80 w-80 object-cover rounded-full mb-5" />
-                <a href="" class="btn-secondary btn-normal">Edit avatar</a>
+                <img id="profile-avatar" alt="Avatar image" class="h-80 w-80 object-cover rounded-full mb-5" />
+                <button class="btn-secondary btn-normal" id="avatarBtn">Edit avatar</button>
             </div>
             <div class="pt-10">
-                <p class="inter-parag text-2xl pb-10">Credits:</p>
-                <h1 class="fredoka-heading text-2xl pb-10">Profile name:</h1>
-                <p class="inter-parag text-xl pb-10">Email:</p>
+                <p class="inter-parag text-2xl pb-10" id="profile-credits">Credits:</p>
+                <h1 class="fredoka-heading text-2xl pb-10" id="profile-name">Profile name:</h1>
+                <p class="inter-parag text-xl pb-10" id="profile-email">Email:</p>
 
                 <h2 class="pt-20 fredoka-heading text-lg pb-5">Other:</h2>
                 <ul class="list-disc ">
                         <li class="underline inter-parag text-base">
                           <a href="#">My listings</a>
                         </li>
-                        <li class="inter-parag text-base" pl-10>
+                        <li class="underline inter-parag text-base" pl-10>
                           <a href="#">FAQ</a>
                         </li>
-                        <li class="inter-parag text-base">
+                        <li class="underline inter-parag text-base">
                           <a href="#">Privacy policy</a>
                         </li>
-                        <li class="inter-parag text-base">
+                        <li class="underline inter-parag text-base">
                           <a href="#">Customer service</a>
                         </li>
-                        <li class="inter-parag text-base">
+                        <li class="underline inter-parag text-base">
                           <a href="#">Terms and conditions</a>
                         </li>
     
@@ -72,16 +80,16 @@
         </div>
     </section>
 
-    <div class="absolute h-full w-full bg-slate-500 bg-opacity-50 top-0 left-0" id="pop-up">
+    <div class="absolute h-full w-full bg-slate-500 bg-opacity-50 top-0 left-0 hide" id="popUp">
         <div class="bg-card flex justify-center rounded-3xl w-2/5 h-60 absolute p-48 top-48 left-1/4">
-            <button><img src="#" ></button>
+            <button type="action" class="w-32 h-32 absolute top-0 right-0" id="closeBtn"><img src="../../assets/images/icons/close.png" alt="Close"></button>
             <div>
-                <h3 class="fredoka-heading text-2xl pb-10">Update avatar:</h3>
+                <h3 class="fredoka-heading text-2xl pr-10 text-nowrap">New avatar url:</h3>
             </div>
             <div>
-                <form action="profile.html">
-                    <input type="file" name="avatar" id="avatar" accept="image/png, image/jpeg" >
-                    <button type="submit" class="btn-primary btn-normal">Update</button>
+                <form action="profile.html" id="edit-avatar-form">
+                    <input type="url" name="avatar" id="profile-avatar-input" class="w-80 p-1 rounded-lg shadow mb-3">
+                    <button type="submit" class="btn-primary w-80">Update</button>
                 </form>
             </div>
         </div>

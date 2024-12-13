@@ -10,6 +10,8 @@
     @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
   </style>
 
+  <script defer src="./app.mjs" type="module"></script>
+
   <link rel="stylesheet" href="styles/style.css" />
 </head>
 
@@ -27,13 +29,13 @@
           <li class="inline pl-10 fredoka-heading nav-link text-lg" pl-10>
             <a href="/pages/product/products.html">Listings</a>
           </li>
-          <li class="inline pl-10 fredoka-heading nav-link text-lg">
+          <li class="inline pl-10 fredoka-heading nav-link text-lg hide" id="profileBtn">
             <a href="/pages/profile/profile.html">Profile</a>
           </li>
-          <li class="inline pl-10 fredoka-heading nav-link text-lg">
+          <li class="inline pl-10 fredoka-heading nav-link text-lg" id="loginBtn">
             <a href="/pages/auth/login.html">Log In</a>
           </li>
-          <li class="inline pl-10 fredoka-heading nav-link text-lg">
+          <li class="inline pl-10 fredoka-heading nav-link text-lg hide" id="logoutBtn">
             <a href="#">Log out</a>
           </li>
         </ul>
@@ -199,8 +201,6 @@
     </div>
     </div>
   </footer>
-
-
 
 </body>
 
