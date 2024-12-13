@@ -10,6 +10,7 @@
         @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
     </style>
     <script defer src="../../app.mjs" type="module"></script>
+    <script defer src="../../src/js/listings/createListing.js" type="module"></script>
 
     <link rel="stylesheet" href="../../styles/style.css" />
 </head>
@@ -41,29 +42,57 @@
             </nav>
         </div>
     </header>
+    
     <section class="flex justify-center mt-10 mb-10 bg-card mx-52 rounded-3xl">
         <div class="grid grid-cols-1">
-            <h1 class="fredoka-heading text-2xl pt-10">Create listing</h1>
-            <form>
-                <label for="file" class="inter-parag text-lg">Insert product images:</label>
-                <input type="file" id="file" name="image" class="input-field mb-5 pt-10" required>
-                <br>
-                <label for="title" class="inter-parag text-lg">Title:</label>
-                <br>
-                <input type="text" id="title" name="title" class="input-field mb-5 w-80 p-1 rounded-lg shadow" required>
-                <br>
-                <label for="date" class="inter-parag text-lg">Final bid date:</label>
-                <br>
-                <input type="datetime" id="date" name="date" class="input-field mb-5 w-80 p-1 rounded-lg shadow"
-                    required>
-                <br>
-                <label for="description" class="inter-parag text-lg">Description:</label>
-                <br>
-                <textarea name="description" id="description" cols="30" rows="10"
-                    class="input-field mb-5 w-80 p-1 rounded-lg shadow"></textarea>
+            <h1 class="fredoka-heading text-2xl pt-10 mb-5">Create listing</h1>
+            <form id="listing-form" class="flex flex-col">
+                <label 
+                for="image" 
+                class="inter-parag text-lg">Insert product image:</label>
+                <input 
+                type="url" 
+                id="image" 
+                name="image" 
+                class="input-field w-80 p-1 rounded-lg shadow mb-5" 
+                required
+                multiple>
+
+                <label 
+                for="title" 
+                class="inter-parag text-lg">Title:</label>
+                <input 
+                type="text" 
+                id="title" 
+                name="title" 
+                class="input-field w-80 p-1 rounded-lg shadow mb-5" 
+                required>
+
+                <label 
+                for="date" 
+                class="inter-parag text-lg">Final bid date:</label>
+                <input 
+                type="datetime-local" 
+                id="date" 
+                name="date" 
+                class="input-field w-80 p-1 rounded-lg shadow mb-5"
+                required>
+
+                <label 
+                for="description" 
+                class="inter-parag text-lg">Description:</label>
+                <textarea 
+                name="description" 
+                id="description" 
+                cols="30" 
+                rows="10"
+                maxlength="250"
+                class="input-field w-80 p-1 rounded-lg shadow mb-5"></textarea>
+
+                <button 
+                class="btn-primary w-80 mb-10" 
+                type="submit">Submit listing</button>
             </form>
-            <button class="btn-primary btn-normal mb-10" type="submit">Submit
-                listing</button>
         </div>
 
     </section>

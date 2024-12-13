@@ -586,6 +586,10 @@ video {
   top: 12rem;
 }
 
+.m-5 {
+  margin: 1.25rem;
+}
+
 .-mx-20 {
   margin-left: -5rem;
   margin-right: -5rem;
@@ -654,6 +658,14 @@ video {
 
 .mt-28 {
   margin-top: 7rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
 }
 
 .block {
@@ -744,6 +756,10 @@ video {
 
 .flex-col {
   flex-direction: column;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
 }
 
 .items-center {
@@ -873,6 +889,10 @@ video {
 
 .text-center {
   text-align: center;
+}
+
+.align-middle {
+  vertical-align: middle;
 }
 
 .text-2xl {
