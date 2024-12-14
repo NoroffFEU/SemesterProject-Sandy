@@ -18,7 +18,7 @@ import { register } from "../../auth/register.js";
   try {
     const response = await register(registerData);
     console.log(response);
-    // window.location.href = '/'; // Redirect to home page
+    window.location.href = '/';
   } catch (error) {
     console.error("An error occurred during registration:", error);
     alert(error.message);

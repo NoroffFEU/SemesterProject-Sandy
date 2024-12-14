@@ -1,4 +1,5 @@
-import { fetchListings } from "../../listings/fetchListings.js";
+import { fetchListings, fetchListingsByProfile } from "../../listings/fetchListings.js";
+import { getLoggedInUser } from "../../helpers/userHelper.js";
 
 function displayListings(listings) {
   const listingContainer = document.getElementById("listing-container");
@@ -11,13 +12,13 @@ function displayListings(listings) {
     const title = card.querySelector("#title");
     const currentBid = card.querySelector("#currentBid");
 
-    listingContainer.appendChild(card);
-
     if (listing.media.length > 0) {
         const imageUrl = listing.media[0].url;
         image.src = imageUrl
     }
+    
     title.textContent = listing.title;
+
     if (listing.bids.length === 0) {
         currentBid.textContent = "No bids yet";
     } else {
@@ -25,12 +26,32 @@ function displayListings(listings) {
             .map(bid => bid.amount)
             .sort((a, b) => b - a)[0];
     }
+
+    const viewProductBtn = card.querySelector("#view-product-btn");
+
+    viewProductBtn.addEventListener("click", () => {
+        window.location.href = `./singleproduct.html?id=${listing.id}`;
+    });
+
+    listingContainer.appendChild(card);
   });
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
     try {
-        const listings = await fetchListings();
+        const params = new URLSearchParams(location.search)
+        const profile = params.get("profile");
+        let listings;
+        if (profile === 'self') {
+            const allListingsButton = document.getElementById("all-listings-button");
+            allListingsButton.classList.remove("hide");
+            const user = getLoggedInUser();
+            listings = await fetchListingsByProfile(user.name);
+        } else {
+            const myListingsButton = document.getElementById("my-listings-button");
+            myListingsButton.classList.remove("hide");
+            listings = await fetchListings();
+        }
         displayListings(listings);
         
     } catch (error) {

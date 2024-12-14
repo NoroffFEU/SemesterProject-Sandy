@@ -48,11 +48,11 @@
     </div>
     <div class="mb-14">
         <a href="../product/create-product.html" class="btn-secondary btn-normal m-5">Create listing</a>
-        <a href="#" class="btn-secondary btn-normal m-5">My listings</a>
+        <a href="?profile=self" class="btn-secondary btn-normal m-5 hide" id="my-listings-button">My listings</a>
+        <a href="?" class="btn-secondary btn-normal m-5 hide" id="all-listings-button">All listings</a>
     </div>
 
-    <div class="grid grid-cols-3 mb-10" id="listing-container"></div>
-
+    <div class="grid grid-cols-1 mb-10 gap-8  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3" id="listing-container"></div>
     <template id="listing-template">
         <div class="block bg-card ml-8 mr-8 rounded-3xl">
             <div class="flex justify-center pt-5 pb-5">
@@ -60,7 +60,7 @@
                 src="../../assets/images/images/retro-chair.jpg" 
                 alt="Vintage chair"
                 id="image"
-                class="object-cover max-h-55 max-w-80 rounded-3xl" />
+                class="object-cover h-80 w-80 rounded-3xl" />
             </div>
 
             <div class="block justify-between">
@@ -72,7 +72,7 @@
                 </div>
 
                 <div class="flex justify-between ml-10 mr-10">
-                    <button class="btn-primary btn-small mb-6">
+                    <button class="btn-primary btn-normal mb-6" id="view-product-btn">
                         <img src="../../assets/images/icons/right-arrow 1.png" alt="View product button" />
                     </button>
                 </div>

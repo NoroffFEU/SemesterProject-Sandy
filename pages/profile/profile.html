@@ -9,7 +9,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Inter:opsz@14..32&family=Sedgwick+Ave+Display&display=swap');
         @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
     </style>
-    <script defer src="../../src/js/ui/profile/avatarPopUp.js"></script>
+    <script defer src="../../src/js/ui/profile/displayPopup.js"></script>
     <script defer src="../../src/js/ui/profile/profile.js" type="module"></script>
     <script defer src="../../src/js/ui/profile/editAvatar.js" type="module"></script>
     <script defer src="../../app.mjs" type="module"></script>
@@ -81,10 +81,10 @@
     </section>
 
     <div class="absolute h-full w-full bg-slate-500 bg-opacity-50 top-0 left-0 hide" id="popUp">
-        <div class="bg-card flex justify-center rounded-3xl w-2/5 h-60 absolute p-48 top-48 left-1/4">
-            <button type="action" class="w-32 h-32 absolute top-0 right-0" id="closeBtn"><img src="../../assets/images/icons/close.png" alt="Close"></button>
+        <div class="bg-card rounded-3xl absolute w-1/4 h-fit p-10 top-1/4 left-1/2 transform -translate-x-1/2">
+            <button type="action" class="absolute top-5 right-5" id="closeBtn"><img src="../../assets/images/icons/close.png" alt="Close"></button>
             <div>
-                <h3 class="fredoka-heading text-2xl pr-10 text-nowrap">New avatar url:</h3>
+                <h3 class="fredoka-heading text-2xl pr-10 pb-5 text-nowrap">New avatar url:</h3>
             </div>
             <div>
                 <form action="profile.html" id="edit-avatar-form">

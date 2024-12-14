@@ -1,15 +1,20 @@
 import { API_KEY } from "../../../services/api/apiKey.js";
 
-export async function fetchListings() {
+async function fetchListingsImpl(url, token) {
   try {
     // Only fetching listings with vintage tag to make the site feel more authentic as it primarily sells only vintage items !!!
-    const response = await fetch("https://v2.api.noroff.dev/auction/listings?_bids=true&_tag=vintage&sortOrder=asc", {
+    const headers = {
+      "Content-Type": "application/json",
+      "X-Noroff-API-Key": API_KEY,
+    }
+
+    if (token) {
+      headers["Authorization"] = `Bearer ${token}`;
+    }
+    
+    const response = await fetch(url, {
       method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${API_KEY}`,
-        "X-Noroff-API-Key": API_KEY,
-      },
+      headers
     });
 
     if (!response.ok) {
@@ -29,4 +34,17 @@ export async function fetchListings() {
     console.error(error);
     throw error;
   }
+}
+
+export function fetchListings() {
+  return fetchListingsImpl("https://v2.api.noroff.dev/auction/listings?_bids=true&_tag=vintage&sortOrder=asc");
+}
+
+export async function fetchListingsByProfile(profile) {
+  const token = localStorage.getItem('token');
+
+    if (!token) {
+        throw new Error('You must be logged in to place a bid');
+    }
+  return fetchListingsImpl(`https://v2.api.noroff.dev/auction/profiles/${profile}/listings?_bids=true&_tag=vintage&sortOrder=asc`, token);
 }

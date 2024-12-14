@@ -4,7 +4,7 @@ export function renderProfile() {
     document.addEventListener("DOMContentLoaded", async () => {
         try {
             const profile = await getProfile();
-            document.getElementById("profile-credits").textContent = profile.data.credits;
+            document.getElementById("profile-credits").textContent = "Credits: " + profile.data.credits;
             document.getElementById("profile-name").textContent = profile.data.name;
             document.getElementById("profile-email").textContent = profile.data.email;
             document.getElementById("profile-avatar").src = profile.data.avatar.url;
