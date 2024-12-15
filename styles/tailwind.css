@@ -21,6 +21,10 @@
   width: 150px;
 }
 
+.btn-xsmall {
+  width: 100px;
+}
+
 .fredoka-heading {
   @apply text-dark;
   font-family: "Fredoka", sans-serif;
@@ -59,3 +63,63 @@
   display: block;
 }
 
+/* Home page media queries */
+@media (max-width: 1340px) {
+  .hero-heading {
+    @apply text-3xl btn-xsmall 
+  }
+
+  .hero-img-div {
+    @apply pr-20 w-2/3
+  }
+
+  .div-hero-header {
+    @apply gap-5
+  }
+
+
+
+}
+
+@media (max-width: 1024px) {
+  .hero-heading {
+    @apply text-2xl btn-xsmall 
+  }
+
+  .hero-img-div {
+    @apply pr-20 w-2/3
+  }
+
+  .div-hero-header {
+    @apply gap-5
+  }
+
+}
+
+@media (max-width: 845px) {
+  .hero-heading {
+    @apply text-xl btn-xsmall
+  }
+
+  .hero-div {
+    @apply justify-center pt-5 pb-5
+  }
+
+  body {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .hero-img-div {
+    display: none;
+  }
+
+  .div-hero-header {
+    @apply gap-5
+  }
+}
+
+@media (max-width: 460px) {
+
+  
+}

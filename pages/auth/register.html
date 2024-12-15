@@ -16,15 +16,15 @@
     <link rel="stylesheet" href="../../styles/style.css" />
 </head>
 
-<body class="bg-secondary pr-20 pl-20">
+<body class="bg-secondary sm:pr-20 sm:pl-20 pt-5">
     <header class="flex justify-between mb-10">
-        <div>
+        <div class="hide sm:block">
             <img src="../../assets/images/logos/biddyLogo.png" alt="Biddy logo" />
         </div>
         <div class="flex">
             <nav class="flex">
                 <ul class="inline-flex items-center list-none">
-                    <li class="inline pl-10 underline fredoka-heading nav-link text-lg">
+                    <li class="inline pl-10 fredoka-heading nav-link text-lg">
                         <a href="../../index.html">Home</a>
                     </li>
                     <li class="inline pl-10 fredoka-heading nav-link text-lg" pl-10>
@@ -45,11 +45,11 @@
     </header>
 
     <section class="flex justify-center mt-20 mb-20">
-    <div class="flex flex-col bg-card p-20 rounded-3xl">
+    <div class="flex flex-col bg-card p-10 sm:p-20 rounded-3xl">
             <h1 class="fredoka-heading text-2xl mb-10">
                 Register
             </h1>
-            <form name="register">
+            <form name="register" class="w-50 sm:w-80">
                 <label for="name" class="form-labels">Name</label>
                 <br>
                 <input 
@@ -57,7 +57,7 @@
                 id="name" 
                 name="name" 
                 required 
-                class="w-80 p-1 rounded-lg shadow mb-3">
+                class="w-60 sm:w-80  p-1 rounded-lg shadow mb-3">
                 <br>
 
                 <label for="email" class="form-labels">Email</label>
@@ -69,7 +69,7 @@
                 required 
                 pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
                 title="Please enter a valid noroff.no or stud.noroff.no address" 
-                class="w-80 p-1 rounded-lg shadow mb-3">
+                class=" w-60 sm:w-80 p-1 rounded-lg shadow mb-3">
                 <br>
 
                 <label for="avatar" class="form-labels">Avatar</label>
@@ -79,7 +79,7 @@
                 id="avatar" 
                 name="avatar" 
                 required 
-                class="w-80 p-1 rounded-lg shadow mb-3">
+                class="w-60 sm:w-80 p-1 rounded-lg shadow mb-3">
                 <br>
 
                 <label for="password" class="form-labels">Password</label>
@@ -89,11 +89,11 @@
                 id="password" 
                 name="password" 
                 required 
-                class="w-80 p-1 rounded-lg shadow">
+                class="w-60 sm:w-80 p-1 rounded-lg shadow">
                 <br>
-                <div class="text-center flex justify-evenly mt-10">
-                    <button class="btn-secondary btn-small" id="register" type="submit">Register</button>
-                    <a href="./login.html" class="btn-primary btn-small">Log in</a>
+                <div class="text-center flex flex-col gap-3 justify-evenly mt-10">
+                    <button class="btn-secondary w-60 sm:w-80" id="register" type="submit">Register</button>
+                    <a href="./login.html" class="btn-primary w-60 sm:w-80">Log in</a>
                 </div>
             </form>
         </div>
@@ -101,44 +101,42 @@
 
     <footer class="bg-complimentary -mx-20 flex justify-around pt-10 pb-10">
         <div class="text-sm underline">
-            <ul>
-                <li>
-                    <a href="#" class="links" class="transition-transform transform hover:scale-110">Home</a>
-                </li>
-                <li>
-                    <a href="#" class="links" class="transition-transform transform hover:scale-110">Listings</a>
-                </li>
-                <li>
-                    <a href="#" class="links" class="transition-transform transform hover:scale-110">Log In</a>
-                </li>
-                <li>
-                    <a href="#" class="links" class="transition-transform transform hover:scale-110">Sign Up</a>
-                </li>
-            </ul>
+          <ul>
+            <li>
+              <a href="#" class="links" class="transition-transform transform hover:scale-110">Home</a>
+            </li>
+            <li>
+              <a href="#" class="links" class="transition-transform transform hover:scale-110">Listings</a>
+            </li>
+            <li>
+              <a href="#" class="links" class="transition-transform transform hover:scale-110">Log In</a>
+            </li>
+            <li>
+              <a href="#" class="links" class="transition-transform transform hover:scale-110">Sign Up</a>
+            </li>
+          </ul>
         </div>
         <div class="text-sm underline">
-            <ul>
-                <li>
-                    <a href="#" class="links" class="transition-transform transform hover:scale-110">Privacy Policy</a>
-                </li>
-                <li>
-                    <a href="#" class="links" class="transition-transform transform hover:scale-110">FAQ</a>
-                </li>
-                <li>
-                    <a href="#" class="links" class="transition-transform transform hover:scale-110">Terms and
-                        Conditions</a>
-                </li>
-                <li>
-                    <a href="#" class="links" class="transition-transform transform hover:scale-110">Customer
-                        service</a>
-                </li>
-            </ul>
+          <ul>
+            <li>
+              <a href="#" class="links" class="transition-transform transform hover:scale-110">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#" class="links" class="transition-transform transform hover:scale-110">FAQ</a>
+            </li>
+            <li>
+              <a href="#" class="links" class="transition-transform transform hover:scale-110">Terms and Conditions</a>
+            </li>
+            <li>
+              <a href="#" class="links" class="transition-transform transform hover:scale-110">Customer service</a>
+            </li>
+          </ul>
         </div>
-        <div>
-            <img src="../../assets/images/logos/biddyLogo.png" alt="Biddy logo" />
+        <div class="hide sm:block">
+          <img src="../../assets/images/logos/biddyLogo.png" alt="Biddy logo" />
         </div>
         </div>
-    </footer>
+      </footer>
 
 </body>
 

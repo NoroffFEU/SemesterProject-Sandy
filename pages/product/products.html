@@ -15,18 +15,18 @@
     <link rel="stylesheet" href="../../styles/style.css" />
 </head>
 
-<body class="bg-secondary pr-20 pl-20">
+<body class="bg-secondary sm:pr-20 sm:pl-20 pt-5">
     <header class="flex justify-between mb-10">
-        <div>
+        <div class="hide sm:block">
             <img src="../../assets/images/logos/biddyLogo.png" alt="Biddy logo" />
         </div>
         <div class="flex">
             <nav class="flex">
                 <ul class="inline-flex items-center list-none">
-                    <li class="inline pl-10 underline fredoka-heading nav-link text-lg">
+                    <li class="inline pl-10 fredoka-heading nav-link text-lg">
                         <a href="../../index.html">Home</a>
                     </li>
-                    <li class="inline pl-10 fredoka-heading nav-link text-lg" pl-10>
+                    <li class="inline pl-10 underline fredoka-heading nav-link text-lg" pl-10>
                         <a href="../product/products.html">Listings</a>
                     </li>
                     <li class="inline pl-10 fredoka-heading nav-link text-lg hide" id="profileBtn">
@@ -46,13 +46,13 @@
     <div>
         <h1 class="fredoka-heading text-center text-3xl pb-10">Listings:</h1>
     </div>
-    <div class="mb-14">
-        <a href="../product/create-product.html" class="btn-secondary btn-normal m-5">Create listing</a>
-        <a href="?profile=self" class="btn-secondary btn-normal m-5 hide" id="my-listings-button">My listings</a>
-        <a href="?" class="btn-secondary btn-normal m-5 hide" id="all-listings-button">All listings</a>
+    <div class="flex mb-5 sm:mb-14 listings-filter-buttons flex-col sm:flex-row">
+        <a href="../product/create-product.html" class="btn-secondary btn-normal m-5 text-center">Create listing</a>
+        <a href="?profile=self" class="btn-secondary btn-normal m-5 hide text-center" id="my-listings-button">My listings</a>
+        <a href="?" class="btn-secondary btn-normal m-5 hide text-center" id="all-listings-button">All listings</a>
     </div>
 
-    <div class="grid grid-cols-1 mb-10 gap-8  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3" id="listing-container"></div>
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mb-10 gap-8" id="listing-container"></div>
     <template id="listing-template">
         <div class="block bg-card ml-8 mr-8 rounded-3xl">
             <div class="flex justify-center pt-5 pb-5">
@@ -60,19 +60,19 @@
                 src="../../assets/images/images/retro-chair.jpg" 
                 alt="Vintage chair"
                 id="image"
-                class="object-cover h-80 w-80 rounded-3xl" />
+                class="object-cover w-60 md:w-80 max-h-80 rounded-3xl" />
             </div>
 
             <div class="block justify-between">
                 <div class="ml-10 mb-6" id="">
-                    <h3 class="fredoka-heading text-xl" 
+                    <h3 class="fredoka-heading text-base sm:text-xl" 
                     id="title">Antique chair</h3>
-                    <p class="inter-parag text-base pt-4" 
+                    <p class="inter-parag text-sm sm:text-base pt-4" 
                     id="currentBid"></p>
                 </div>
 
                 <div class="flex justify-between ml-10 mr-10">
-                    <button class="btn-primary btn-normal mb-6" id="view-product-btn">
+                    <button class="btn-primary btn-small sm:btn-normal mb-6" id="view-product-btn">
                         <img src="../../assets/images/icons/right-arrow 1.png" alt="View product button" />
                     </button>
                 </div>
@@ -80,45 +80,43 @@
         </div>
     </template>
 
-    <footer class="bg-complimentary -mx-20 flex justify-around pt-10 pb-10">
-        <div class="text-sm underline">
-            <ul>
-                <li>
-                    <a href="#" class="links" class="transition-transform transform hover:scale-110">Home</a>
-                </li>
-                <li>
-                    <a href="#" class="links" class="transition-transform transform hover:scale-110">Listings</a>
-                </li>
-                <li>
-                    <a href="#" class="links" class="transition-transform transform hover:scale-110">Log In</a>
-                </li>
-                <li>
-                    <a href="#" class="links" class="transition-transform transform hover:scale-110">Sign Up</a>
-                </li>
-            </ul>
-        </div>
-        <div class="text-sm underline">
-            <ul>
-                <li>
-                    <a href="#" class="links" class="transition-transform transform hover:scale-110">Privacy Policy</a>
-                </li>
-                <li>
-                    <a href="#" class="links" class="transition-transform transform hover:scale-110">FAQ</a>
-                </li>
-                <li>
-                    <a href="#" class="links" class="transition-transform transform hover:scale-110">Terms and
-                        Conditions</a>
-                </li>
-                <li>
-                    <a href="#" class="links" class="transition-transform transform hover:scale-110">Customer
-                        service</a>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <img src="../../assets/images/logos/biddyLogo.png" alt="Biddy logo" />
-        </div>
-        </div>
+    <footer class="bg-complimentary -mx-20 flex justify-evenly sm:justify-around pt-10 pb-10 w-auto overflow-x-hidden">
+      <div class="text-sm underline">
+        <ul>
+          <li>
+            <a href="#" class="links" class="transition-transform transform hover:scale-110">Home</a>
+          </li>
+          <li>
+            <a href="#" class="links" class="transition-transform transform hover:scale-110">Listings</a>
+          </li>
+          <li>
+            <a href="#" class="links" class="transition-transform transform hover:scale-110">Log In</a>
+          </li>
+          <li>
+            <a href="#" class="links" class="transition-transform transform hover:scale-110">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+      <div class="text-sm underline">
+        <ul>
+          <li>
+            <a href="#" class="links" class="transition-transform transform hover:scale-110">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="#" class="links" class="transition-transform transform hover:scale-110">FAQ</a>
+          </li>
+          <li>
+            <a href="#" class="links" class="transition-transform transform hover:scale-110">Terms and Conditions</a>
+          </li>
+          <li>
+            <a href="#" class="links" class="transition-transform transform hover:scale-110">Customer service</a>
+          </li>
+        </ul>
+      </div>
+      <div class="hide sm:block">
+        <img src="../../assets/images/logos/biddyLogo.png" alt="Biddy logo" />
+      </div>
+      </div>
     </footer>
 
 

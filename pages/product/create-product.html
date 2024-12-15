@@ -15,14 +15,14 @@
     <link rel="stylesheet" href="../../styles/style.css" />
 </head>
 
-<body class="bg-secondary pr-20 pl-20">
+<body class="bg-secondary sm:pr-20 sm:pl-20 pt-5">
     <header class="flex justify-between mb-10">
-        <div>
+        <div class="hide sm:block">
             <img src="../../assets/images/logos/biddyLogo.png" alt="Biddy logo" />
         </div>
         <div class="flex">
             <nav class="flex">
-                <ul class="inline-flex items-center list-none">
+                <ul class="inline-flex items-center list-none overflow-x-hidden">
                     <li class="inline pl-10 underline fredoka-heading nav-link text-lg">
                         <a href="../../index.html">Home</a>
                     </li>
@@ -43,8 +43,8 @@
         </div>
     </header>
     
-    <section class="flex justify-center mt-10 mb-10 bg-card mx-52 rounded-3xl">
-        <div class="grid grid-cols-1">
+    <section class="flex justify-center mt-10 mb-10">
+        <div class="grid grid-cols-1 bg-card rounded-3xl p-10 sm:p-20">
             <h1 class="fredoka-heading text-2xl pt-10 mb-5">Create listing</h1>
             <form id="listing-form" class="flex flex-col">
                 <label 
@@ -54,7 +54,7 @@
                 type="url" 
                 id="image" 
                 name="image" 
-                class="input-field w-80 p-1 rounded-lg shadow mb-5" 
+                class="input-field w-60 sm:w-80 p-1 rounded-lg shadow mb-5" 
                 required
                 multiple>
 
@@ -65,7 +65,7 @@
                 type="text" 
                 id="title" 
                 name="title" 
-                class="input-field w-80 p-1 rounded-lg shadow mb-5" 
+                class="input-field w-60 sm:w-80 p-1 rounded-lg shadow mb-5" 
                 required>
 
                 <label 
@@ -75,7 +75,7 @@
                 type="datetime-local" 
                 id="date" 
                 name="date" 
-                class="input-field w-80 p-1 rounded-lg shadow mb-5"
+                class="input-field w-60 sm:w-80 p-1 rounded-lg shadow mb-5"
                 required>
 
                 <label 
@@ -87,10 +87,10 @@
                 cols="30" 
                 rows="10"
                 maxlength="250"
-                class="input-field w-80 p-1 rounded-lg shadow mb-5"></textarea>
+                class="input-field w-60 sm:w-80 p-1 rounded-lg shadow mb-5"></textarea>
 
                 <button 
-                class="btn-primary w-80 mb-10" 
+                class="btn-primary w-60 sm:w-80 sm:mb-10" 
                 type="submit">Submit listing</button>
             </form>
         </div>
@@ -98,46 +98,44 @@
     </section>
 
 
-    <footer class="bg-complimentary -mx-20 flex justify-around pt-10 pb-10">
+    <footer class="bg-complimentary -mx-20 flex justify-evenly sm:justify-around pt-10 pb-10 w-auto overflow-x-hidden">
         <div class="text-sm underline">
-            <ul>
-                <li>
-                    <a href="#" class="links" class="transition-transform transform hover:scale-110">Home</a>
-                </li>
-                <li>
-                    <a href="#" class="links" class="transition-transform transform hover:scale-110">Listings</a>
-                </li>
-                <li>
-                    <a href="#" class="links" class="transition-transform transform hover:scale-110">Log In</a>
-                </li>
-                <li>
-                    <a href="#" class="links" class="transition-transform transform hover:scale-110">Sign Up</a>
-                </li>
-            </ul>
+          <ul>
+            <li>
+              <a href="#" class="links" class="transition-transform transform hover:scale-110">Home</a>
+            </li>
+            <li>
+              <a href="#" class="links" class="transition-transform transform hover:scale-110">Listings</a>
+            </li>
+            <li>
+              <a href="#" class="links" class="transition-transform transform hover:scale-110">Log In</a>
+            </li>
+            <li>
+              <a href="#" class="links" class="transition-transform transform hover:scale-110">Sign Up</a>
+            </li>
+          </ul>
         </div>
         <div class="text-sm underline">
-            <ul>
-                <li>
-                    <a href="#" class="links" class="transition-transform transform hover:scale-110">Privacy Policy</a>
-                </li>
-                <li>
-                    <a href="#" class="links" class="transition-transform transform hover:scale-110">FAQ</a>
-                </li>
-                <li>
-                    <a href="#" class="links" class="transition-transform transform hover:scale-110">Terms and
-                        Conditions</a>
-                </li>
-                <li>
-                    <a href="#" class="links" class="transition-transform transform hover:scale-110">Customer
-                        service</a>
-                </li>
-            </ul>
+          <ul>
+            <li>
+              <a href="#" class="links" class="transition-transform transform hover:scale-110">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#" class="links" class="transition-transform transform hover:scale-110">FAQ</a>
+            </li>
+            <li>
+              <a href="#" class="links" class="transition-transform transform hover:scale-110">Terms and Conditions</a>
+            </li>
+            <li>
+              <a href="#" class="links" class="transition-transform transform hover:scale-110">Customer service</a>
+            </li>
+          </ul>
         </div>
-        <div>
-            <img src="../../assets/images/logos/biddyLogo.png" alt="Biddy logo" />
+        <div class="hide sm:block">
+          <img src="../../assets/images/logos/biddyLogo.png" alt="Biddy logo" />
         </div>
         </div>
-    </footer>
+      </footer>
 
 
 
