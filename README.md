@@ -1,7 +1,8 @@
 # SemesterProject-Sandy
 This is a repository for my Semester project 2024
 
-(https://github.com/user-attachments/assets/633e8e2f-51c5-4f8f-8e30-63a81cfb6078)
+![Skjermbilde 2024-12-15 235610](https://github.com/user-attachments/assets/ad7fe036-2418-4038-9d0c-16eb2ab1604b)
+
 
 Biddy is an online marketplace for sellers and buyers interested in vintage belongings.
 Biddys core values are sustainability, affordable and unique pieces.
