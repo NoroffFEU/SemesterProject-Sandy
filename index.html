@@ -15,27 +15,52 @@
   <link rel="stylesheet" href="styles/style.css" />
 </head>
 
-<body class="bg-secondary sm:pr-20 sm:pl-20 pt-5">
+<body class="bg-secondary md:pr-20 md:pl-20 pt-5">
   <header class="flex justify-between mb-10">
-    <div class="hide sm:block">
+    <div class="header-logo">
       <img src="./assets/images/logos/biddyLogo.png" alt="Biddy logo" />
     </div>
     <div class="flex">
       <nav class="flex">
-        <ul class="inline-flex items-center list-none">
+
+        <div id="burger-menu-button" class="hide">
+          <span></span>
+        </div>
+
+        <div id="burger-menu" class="hide">
+            <ul>
+              <li class="inline pl-10 underline fredoka-heading nav-link text-lg">
+                <a href="#">Home</a>
+              </li>
+              <li class="inline sm:pl-10 fredoka-heading nav-link text-lg" pl-10>
+                <a href="/pages/product/products.html">Listings</a>
+              </li>
+              <li class="header-links hide profileBtn">
+                <a href="/pages/profile/profile.html">Profile</a>
+              </li>
+              <li class="header-links loginButton">
+                <a href="/pages/auth/login.html">Log In</a>
+              </li>
+              <li class="header-links hide logoutButton">
+                <a href="#">Log out</a>
+              </li>
+            </ul>
+        </div>
+
+        <ul class="flex items-center list-none nav-large">
           <li class="inline pl-10 underline fredoka-heading nav-link text-lg">
             <a href="#">Home</a>
           </li>
           <li class="inline sm:pl-10 fredoka-heading nav-link text-lg" pl-10>
             <a href="/pages/product/products.html">Listings</a>
           </li>
-          <li class="inline pl-10 fredoka-heading nav-link text-lg hide" id="profileBtn">
+          <li class="header-links hide profileBtn">
             <a href="/pages/profile/profile.html">Profile</a>
           </li>
-          <li class="inline pl-10 fredoka-heading nav-link text-lg" id="loginBtn">
+          <li class="header-links loginButton">
             <a href="/pages/auth/login.html">Log In</a>
           </li>
-          <li class="inline pl-10 fredoka-heading nav-link text-lg hide" id="logoutBtn">
+          <li class="header-links hide logoutButton">
             <a href="#">Log out</a>
           </li>
         </ul>
@@ -43,8 +68,8 @@
     </div>
   </header>
 
-  <section>
-    <div class="bg-card rounded-3xl flex hero-div">
+  <section class="flex justify-center">
+    <div class="bg-card rounded-3xl flex hero-div w-2/3">
       <div class="hero-img-div inline-block pr-32">
         <img src="./assets/images/images/hero/320731640_11288322 1.png" alt="Hero" />
       </div>
@@ -89,8 +114,8 @@
       <br>
       Are you selling or buying today?</p>
       <div class="flex justify-center pt-5 pb-10 gap-10">
-        <buttton class="btn-primary w-80 text-center">Listings</buttton>
-        <buttton class="btn-secondary w-80 text-center">Create listing</buttton>
+        <button class="btn-primary w-80 text-center" onclick="window.location.href='/pages/product/products.html'">Listings</button>
+        <button class="btn-secondary w-80 text-center" onclick="window.location.href='/pages/product/create-product.html'">Create listing</button>
       </div>
   </section>
   
@@ -98,32 +123,32 @@
     <div class="text-sm underline">
       <ul>
         <li>
-          <a href="#" class="links" class="transition-transform transform hover:scale-110">Home</a>
+          <a href="#" class="links" class="footer-links">Home</a>
         </li>
         <li>
-          <a href="#" class="links" class="transition-transform transform hover:scale-110">Listings</a>
+          <a href="#" class="links" class="footer-links">Listings</a>
         </li>
         <li>
-          <a href="#" class="links" class="transition-transform transform hover:scale-110">Log In</a>
+          <a href="#" class="links" class="footer-links">Log In</a>
         </li>
         <li>
-          <a href="#" class="links" class="transition-transform transform hover:scale-110">Sign Up</a>
+          <a href="#" class="links" class="footer-links">Sign Up</a>
         </li>
       </ul>
     </div>
     <div class="text-sm underline">
       <ul>
         <li>
-          <a href="#" class="links" class="transition-transform transform hover:scale-110">Privacy Policy</a>
+          <a href="#" class="links" class="footer-links">Privacy Policy</a>
         </li>
         <li>
-          <a href="#" class="links" class="transition-transform transform hover:scale-110">FAQ</a>
+          <a href="#" class="links" class="footer-links">FAQ</a>
         </li>
         <li>
-          <a href="#" class="links" class="transition-transform transform hover:scale-110">Terms and Conditions</a>
+          <a href="#" class="links" class="footer-links">Terms and Conditions</a>
         </li>
         <li>
-          <a href="#" class="links" class="transition-transform transform hover:scale-110">Customer service</a>
+          <a href="#" class="links" class="footer-links">Customer service</a>
         </li>
       </ul>
     </div>

@@ -1,14 +1,13 @@
 export function showButtons() {
     document.addEventListener("DOMContentLoaded", () => {
-        const login = document.getElementById("loginBtn");
-        const logout = document.getElementById("logoutBtn");
-        const profile = document.getElementById("profileBtn");
+        const loginButtons = document.querySelectorAll(".loginButton");
+        const logoutButtons = document.querySelectorAll(".logoutButton");
+        const profileButtons = document.querySelectorAll(".profileBtn");
     
         if (localStorage.getItem("token")) {
-            login.classList.add("hide");
-            logout.classList.remove("hide");
-            profile.classList.remove("hide");
-    
+            loginButtons.forEach(btn => btn.classList.add("hide"));
+            logoutButtons.forEach(btn => btn.classList.remove("hide"));
+            profileButtons.forEach(btn => btn.classList.remove("hide"));
         }
     });
 } 

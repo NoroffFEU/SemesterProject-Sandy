@@ -3,10 +3,7 @@
 @tailwind utilities;
 
 .btn-primary {
-  @apply bg-primary text-dark font-bold py-2 px-10 rounded-full fredoka-heading;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  @apply bg-primary text-dark font-bold py-2 px-10 rounded-full fredoka-heading text-center;
 }
 
 .btn-secondary {
@@ -63,7 +60,15 @@
   display: block;
 }
 
-/* Home page media queries */
+.footer-links {
+  @apply transition-transform transform hover:scale-110;
+}
+
+.header-links {
+  @apply pl-10 fredoka-heading nav-link text-lg;
+}
+
+/* Media queries */
 @media (max-width: 1340px) {
   .hero-heading {
     @apply text-3xl btn-xsmall 
@@ -77,6 +82,13 @@
     @apply gap-5
   }
 
+  .listings-filter-buttons {
+    @apply flex-col
+  }
+
+  .listings-filter-buttons a, input, button {
+    @apply m-1
+  }
 
 
 }
@@ -94,6 +106,36 @@
     @apply gap-5
   }
 
+
+}
+
+@media (max-width: 768px) {
+  #burger-menu-button, #burger-menu, .header-logo {
+    display: block; 
+  }
+
+  .nav-large, .header-logo {
+    display: none;
+  }
+
+  body {
+    padding: 0;
+  }
+  
+}
+
+@media (max-width: 460px) {
+  .avatar-popup-div h3 {
+    @apply text-xl
+  }
+
+  #profile-avatar-input, .update-avatar-btn {
+    @apply w-60
+  }
+
+  .listings-filter-buttons div {
+    @apply flex-col mx-10
+  }
 }
 
 @media (max-width: 845px) {
@@ -114,7 +156,90 @@
   }
 }
 
-@media (max-width: 460px) {
 
+#burger-menu-button {
+  cursor: pointer;
+  height: 27px;
+  width: 27px;
+  margin: 50px;
+  overflow: visible;
+  position: relative;
+  z-index:2;
+}
+#burger-menu-button span,
+#burger-menu-button span:before,
+#burger-menu-button span:after {
+  @apply bg-primary;
+  display: block;
+  height: 4px;
+  opacity: 1;
+  position: absolute;
+  transition: 0.3s ease-in-out;
+}
+#burger-menu-button span:before,
+#burger-menu-button span:after {
+  content: "";
+}
+#burger-menu-button span {
+  right: 0px;
+  top: 13px;
+  width: 27px;
+}
+#burger-menu-button span:before {
+  left: 0px;
+  top: -10px;
+  width: 16px;
+}
+#burger-menu-button span:after {
+  left: 0px;
+  top: 10px;
+  width: 20px;
+}
+
+#burger-menu-button.close span {
+  transform: rotate(-45deg);
+  top: 13px;
+  width: 27px;
+}
+#burger-menu-button.close span:before {
+  top: 0px;
+  transform: rotate(90deg);
+  width: 27px;
+}
+#burger-menu-button.close span:after {
+  top: 0px;
+  left:0;
+  transform: rotate(90deg);
+  opacity:0;
+  width:0;
+}
+
+#burger-menu {
+  z-index:1;
+  min-width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  top:0;
+  height:0;
+  visibility: hidden;
+  opacity: 0;
+  text-align:center;
+  padding-top:20px;
+  transition: all 0.3s ease-in-out;
   
+}
+
+#burger-menu.overlay {
+  visibility: visible;
+  opacity: 1;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background:rgba(0,0,0,0.5);
+}
+
+#burger-menu a{
+  display:block;
+  font-size: 32px;
+  margin-bottom:30px;
+  text-decoration:none;
 }
