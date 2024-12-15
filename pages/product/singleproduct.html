@@ -41,23 +41,25 @@
             </nav>
         </div>
     </header>
-    <section class="grid grid-cols-2 mt-10 mb-10">
-        <div id="product-images">
+
+
+    <section class="grid grid-cols-1 lg:grid-cols-2 lg:mt-24 lg:mb-48 mt-10 mb-10">
+        <div id="product-images" class="mb-5 lg:mb-0">
         </div>
         <div>
             <div class="ml-5 sticky top-20">
-                <h1 class="inter-parag text-lg mb-20"><span id="product-time-left"></span></h1>
+                <h1 class="inter-parag text-lg mb-10 xl:mb-20"><span id="product-time-left"></span></h1>
 
-                <h2 class="fredoka-heading text-3xl mb-5" id="product-title">Placeholder title</h2>
+                <h2 class="fredoka-heading text-xl xl:text-3xl mb-5" id="product-title">Placeholder title</h2>
 
-                <p class="inter-parag text-xl mb-5" id="product-bid">Highest bid:</p>
+                <p class="inter-parag text-base xl:text-xl mb-5" id="product-bid">Highest bid:</p>
 
                 <button class="btn-primary btn-normal fredoka-heading mb-10 hide" id="place-bid-button">Place bid</button>
 
                 <button class="btn-secondary btn-normal fredoka-heading mb-10 ml-5 hide" id="view-bids-button">View bids</button>
 
-                <h3 class="inter-parag text-lg">Description:
-                    <p class="inter-parag text-lg" id="product-description">Placeholder description</p>
+                <h3 class="inter-parag text-lg xl:text-xl">Description:
+                    <p class="inter-parag text-base xl:text-lg" id="product-description">Placeholder description</p>
                 </h3>
             </div>
         </div>
@@ -80,7 +82,7 @@
 
     
 
-    <div class="absolute h-full w-full bg-slate-500 bg-opacity-50 top-0 left-0 hide" id="view-bids-popup">
+    <div class="fixed h-full w-full bg-slate-500 bg-opacity-50 top-0 left-0 hide" id="view-bids-popup">
         <div class="bg-card rounded-3xl absolute w-1/4 h-fit p-10 top-1/4 left-1/2 transform -translate-x-1/2">
             <div class="flex flex-col w-full h-full">
                 <template id="bid-item-template">
@@ -97,7 +99,7 @@
     </div>
 
 
-    <footer class="bg-complimentary -mx-20 flex justify-around pt-10 pb-10">
+    <footer class="bg-complimentary sm:-mx-20 flex justify-around pt-10 pb-10">
         <div class="text-sm underline">
           <ul>
             <li>
@@ -131,7 +133,7 @@
           </ul>
         </div>
         <div class="hide sm:block">
-          <img src="./assets/images/logos/biddyLogo.png" alt="Biddy logo" />
+          <img src="../../assets/images/logos/biddyLogo.png" alt="Biddy logo" />
         </div>
         </div>
       </footer>
